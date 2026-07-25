@@ -1,6 +1,18 @@
 // A-TECH TRAINING Landing Page Scripts
 
 document.addEventListener('DOMContentLoaded', () => {
+    /* MOBILE NAV TOGGLE */
+    const navToggle = document.querySelector('.nav-toggle');
+    const navLinks = document.querySelector('.nav-links');
+
+    if (navToggle && navLinks) {
+        navToggle.addEventListener('click', () => {
+            const expanded = navToggle.getAttribute('aria-expanded') === 'true';
+            navToggle.setAttribute('aria-expanded', String(!expanded));
+            navLinks.classList.toggle('show');
+        });
+    }
+
     /* COMPONENT: Navigation Smooth Scrolling */
     const links = document.querySelectorAll('a[href^="#"]');
     

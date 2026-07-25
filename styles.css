@@ -74,6 +74,15 @@ a {
     gap: 20px;
 }
 
+.nav-toggle {
+    display: none;
+    background: transparent;
+    border: none;
+    font-size: 1.6rem;
+    cursor: pointer;
+    color: var(--primary-blue);
+}
+
 .nav-links a {
     font-weight: 500;
     transition: color 0.3s;
@@ -580,6 +589,46 @@ a {
     }
 }
 
+@media (max-width: 480px) {
+    .hero {
+        padding: 56px 16px;
+    }
+
+    .hero-content h1 {
+        font-size: 1.4rem;
+    }
+
+    .hero-content p {
+        font-size: 0.98rem;
+        max-width: 100%;
+    }
+
+    .btn-hero {
+        min-width: auto;
+        width: 100%;
+        padding: 12px 16px;
+    }
+
+    .btn-secondary {
+        min-width: auto;
+        width: 100%;
+        padding: 12px 16px;
+    }
+
+    .support-widgets {
+        right: 10px;
+        bottom: 10px;
+        gap: 8px;
+    }
+
+    .whatsapp-float, .ai-float {
+        min-width: 140px;
+        padding: 10px 12px;
+        gap: 8px;
+        font-size: 0.9rem;
+    }
+}
+
 /* COMPONENT: Support Widgets */
 .support-widgets {
     position: fixed;
@@ -727,5 +776,32 @@ footer {
         gap: 10px;
         height: auto;
         padding: 15px 0;
+    }
+
+    .nav-toggle {
+        display: inline-flex;
+        align-self: flex-end;
+        margin-right: 10px;
+    }
+
+    .nav-links {
+        display: none;
+        width: 100%;
+        flex-direction: column;
+        gap: 8px;
+        padding: 10px 0 20px;
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .nav-links li {
+        width: 100%;
+    }
+
+    .nav-links a.btn-primary, .nav-links a.btn-secondary {
+        width: 100%;
+        justify-content: center;
     }
 }
